@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f4f8;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.board-row {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.square {
+  width: 64px;
+  height: 64px;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 10px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2b6cb0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.square:active {
+  background: #cbd5e1;
+}
+
+.square.winning {
+  background: #68d391;
+  color: #22543d;
+  box-shadow: 0 0 0 3px #38a16944;
+}
+
+.game-info {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.game-info h2 {
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.game-info ol {
+  padding-left: 18px;
+  margin: 0 0 16px 0;
+}
+
+.game-info button {
+  background: #edf2f7;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-bottom: 4px;
+  font-size: 1rem;
+  color: #2b6cb0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.game-info button:disabled {
+  color: #a0aec0;
+  background: #e2e8f0;
+  cursor: default;
+}
+
+.restart-btn {
+  background: #4299e1;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.restart-btn:hover {
+  background: #2b6cb0;
+}
+
+.footer {
+  margin-top: 32px;
+  color: #a0aec0;
+  font-size: 1rem;
+  text-align: center;
+}
